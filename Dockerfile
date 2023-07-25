@@ -1,4 +1,4 @@
-FROM alpine:3 as python-build
+FROM alpine:3
 
 RUN apk update \
   && apk --no-cache --update add \
