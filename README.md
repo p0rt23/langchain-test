@@ -13,5 +13,5 @@ HUGGINGFACEHUB_API_TOKEN defined.
 
 ```bash
 sudo docker build . -t p0rt23/langchain-test
-sudo docker run --rm -it p0rt23/langchain-test
+sudo docker run --rm -it -v langchain-test-pip-cache:/root/.cache p0rt23/langchain-test
 ```
