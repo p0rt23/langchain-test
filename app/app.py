@@ -3,7 +3,7 @@ from langchain.llms import HuggingFacePipeline
 from langchain import PromptTemplate, LLMChain
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 
-model_id = "google/flan-t5-large" 
+model_id = "google/flan-t5-xxl" 
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
 
