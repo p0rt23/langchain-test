@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker build . -t p0rt23/langchain-test
+docker run --rm -it -v langchain-test-pip-cache:/root/.cache p0rt23/langchain-test
