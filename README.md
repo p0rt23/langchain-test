@@ -1,5 +1,9 @@
 # langchain-test
 
+## TODO
+- How to use local resources / services vs API calls
+- How to create custom data source
+
 ## Install
 
 Need to create a [.env](https://pypi.org/project/python-dotenv/) file in ./app/ with 
@@ -9,5 +13,5 @@ HUGGINGFACEHUB_API_TOKEN defined.
 
 ```bash
 sudo docker build . -t p0rt23/langchain-test
-sudo docker run --rm p0rt23/langchain-test
+sudo docker run --rm -it p0rt23/langchain-test
 ```

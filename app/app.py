@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import sys
 from dotenv import load_dotenv
 from langchain import HuggingFaceHub
 from langchain import PromptTemplate, LLMChain
@@ -19,7 +20,10 @@ Answer: Let's think step by step."""
 prompt = PromptTemplate(template=template, input_variables=["question"])
 llm_chain = LLMChain(prompt=prompt, llm=llm)
 
-# question = "In the first movie of Harry Potter, what is the name of the three-headed dog?"
-question = "What is the best way to eat a banana?"
+while True:
+    question = input("Your question (exit to quit): ")
 
-print(llm_chain.run(question))
+    if question == "exit":
+        sys.exit()
+    else:
+        print(llm_chain.run(question))
