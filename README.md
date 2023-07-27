@@ -1,6 +1,8 @@
 # langchain-test
 
 ## TODO
+- Add Jenkinsfile to run on server, build image only.
+- Discord bot
 - What is a tokenizer?
 - What is Seq2SeqLM?
 - What is text2text-generation?
