@@ -1,7 +1,10 @@
 node {
     stage('Build') {
         checkout scm
-        sh "docker volume rm langchain-test-pip-cache"
+        try {
+            sh "docker volume rm langchain-test-pip-cache"
+        }
+        catch (Exception e) { }
         sh "docker build -t p0rt23/langchain-test ."
     }
 }
