@@ -11,6 +11,11 @@
 
 - [Quickstart doc for langchain](https://python.langchain.com/docs/get_started/quickstart.html)
 
+For local LLM, it will download the model into the python cache directory.  It takes 50gb for
+the FLAN-T5-XXL model, and it will need 50gb of memory as it loads all it all into RAM.  For
+processing, it will use any many cores as is availabe.
+
+
 ```bash
 sudo ./langchain-test
 
