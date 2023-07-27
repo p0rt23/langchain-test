@@ -3,7 +3,7 @@ from langchain.llms import HuggingFacePipeline
 from langchain import PromptTemplate, LLMChain
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
 
-model_id = "google/flan-t5-xxl" 
+model_id = "google/flan-t5-xl" 
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
 
@@ -11,7 +11,7 @@ llm = HuggingFacePipeline(pipeline = pipeline(
     "text2text-generation",
     model = model,
     tokenizer = tokenizer,
-    max_length = 100
+    max_length = 128
 ))
  
 template = """Question: {question}
